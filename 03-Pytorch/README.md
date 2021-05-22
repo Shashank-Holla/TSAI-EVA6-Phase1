@@ -9,7 +9,7 @@ Objective of this project is to train a neural network to take in two inputs- an
 * Batch Size: 128
 * Epochs: 10
 
-### 
+### Observations
 
 **Data Representation** - Input image and the generated random number is represented as a tensor and fed to the network. The random number tensor is converted into embedding with dictionary size as 10 (random number ranges from 0 to 9) inside the model. 
 
