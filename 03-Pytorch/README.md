@@ -4,4 +4,11 @@ Objective of this project is to train a neural network to take in two inputs- an
 
 ### Model Hyperparameters
 
+Optimizer: SGD
+Loss function: Cross Entropy loss (MNIST digit recognition) + Cross Entropy loss (Sum recognition)
+Batch Size: 128
+Epochs: 10
+
+
+
 
