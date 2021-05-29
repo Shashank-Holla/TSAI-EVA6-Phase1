@@ -39,8 +39,69 @@ Shared below is the trend of the Total Error over iterations for different learn
 
 Objective is to design a fully convolutional neural network for image classification on MNIST dataset to achieve test accuracy of 99.4% with model's total parameter less than 20K.
 
-### Model's hyper parameters
+### Model's hyperparameters
 
+* Optimizer: SGD
+* Loss Function: Cross Entropy Loss
+* Learning Rate: 0.04
+* Dropout: 0.069
+* Batch Size: 128
+* Epochs: 20
+
+### Model Summary
+```
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Conv2d-1            [-1, 8, 28, 28]              72
+              ReLU-2            [-1, 8, 28, 28]               0
+       BatchNorm2d-3            [-1, 8, 28, 28]              16
+           Dropout-4            [-1, 8, 28, 28]               0
+            Conv2d-5           [-1, 16, 28, 28]           1,152
+              ReLU-6           [-1, 16, 28, 28]               0
+       BatchNorm2d-7           [-1, 16, 28, 28]              32
+           Dropout-8           [-1, 16, 28, 28]               0
+            Conv2d-9           [-1, 16, 28, 28]           2,304
+             ReLU-10           [-1, 16, 28, 28]               0
+      BatchNorm2d-11           [-1, 16, 28, 28]              32
+          Dropout-12           [-1, 16, 28, 28]               0
+        MaxPool2d-13           [-1, 16, 14, 14]               0
+           Conv2d-14            [-1, 8, 14, 14]             128
+           Conv2d-15           [-1, 16, 12, 12]           1,152
+             ReLU-16           [-1, 16, 12, 12]               0
+      BatchNorm2d-17           [-1, 16, 12, 12]              32
+          Dropout-18           [-1, 16, 12, 12]               0
+           Conv2d-19           [-1, 16, 10, 10]           2,304
+             ReLU-20           [-1, 16, 10, 10]               0
+      BatchNorm2d-21           [-1, 16, 10, 10]              32
+          Dropout-22           [-1, 16, 10, 10]               0
+           Conv2d-23             [-1, 16, 8, 8]           2,304
+             ReLU-24             [-1, 16, 8, 8]               0
+      BatchNorm2d-25             [-1, 16, 8, 8]              32
+          Dropout-26             [-1, 16, 8, 8]               0
+           Conv2d-27             [-1, 16, 6, 6]           2,304
+             ReLU-28             [-1, 16, 6, 6]               0
+      BatchNorm2d-29             [-1, 16, 6, 6]              32
+          Dropout-30             [-1, 16, 6, 6]               0
+        AvgPool2d-31             [-1, 16, 1, 1]               0
+           Conv2d-32             [-1, 10, 1, 1]             160
+================================================================
+Total params: 12,088
+Trainable params: 12,088
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.00
+Forward/backward pass size (MB): 1.16
+Params size (MB): 0.05
+Estimated Total Size (MB): 1.21
+----------------------------------------------------------------
+```
 ### Test Results
+
+Best test accuracy: 99.49%
+
+Total parameters: 12,088
+
+**Train/Test Loss and accuracy trend versus epochs.**
 
 ![](images/Loss&accuracy.png)
