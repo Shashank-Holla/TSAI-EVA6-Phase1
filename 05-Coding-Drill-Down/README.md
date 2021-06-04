@@ -2,7 +2,9 @@
 
 Objective of the assignment is to document steps from setting up initial model with training structure to a lean model with less than 8K model parameter size that can achieve atleast 99.4% test accuracy on MNIST dataset.
 
-## Code 1
+## Code 1 
+
+[Colab code](MNIST_Classification_Model0.ipynb)
 
 ### Target:
 1. Setup structure for MNIST image classification. Setup of dataset preparation, data transformation, dataloader, first CNN model, train and test loops.
@@ -66,6 +68,8 @@ Estimated Total Size (MB): 7.14
 
 ## Code 2
 
+[Colab code](MNIST_Classification_Model1.ipynb)
+
 ### Target:
 1. Previous model was quite heavy with 1.175M parameters. Target is to reduce the number of parameters and make the model lighter.
 
@@ -125,6 +129,8 @@ Estimated Total Size (MB): 0.93
 ![](images/code2.png)
 
 ## Code 3
+
+[Colab code](MNIST_Classification_Model2.ipynb)
 
 ### Target:
 1. Previous model was showing over-fitting tendency. We will try to reduce the gap between test and train accuracy by regularizing the model with dropouts.
@@ -193,6 +199,8 @@ Estimated Total Size (MB): 1.21
 
 ## Code 4
 
+[Colab code](MNIST_Classification_Model3.ipynb)
+
 ### Target:
 1. Previous model's parameter count was 12K. Useful patterns of the MNIST digits are formed at RF=5x5 itself. Hence, max pooling will be performed at RF 5x5. Also, reduce number of kernels with large channels (16 channels) and add kernels with 12 channels since MNIST has simple edges and less number of classes. 
 
@@ -255,6 +263,8 @@ Estimated Total Size (MB): 0.78
 ![](images/code4.png)
 
 ## Code 5
+
+[Colab code](MNIST_Classification_Model4.ipynb)
 
 ### Target:
 1. Model's test accuracy is at 99.35%. We will try to check if accuracy can be increased by addition of image augmentation (random rotation of +/- 6.9 degrees).
