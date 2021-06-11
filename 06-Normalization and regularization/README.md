@@ -30,14 +30,18 @@ Across models
 ## Results
 
 ### Training loss/accuracy trend across normalization vs epochs
+![](images/train_trend.JPG)
 
 ### Test loss/accuracy trend across normalization vs epochs
-
+![](images/test_trend.JPG)
 
 ### Missclassified Images
 
 #### Model 1: Batch Normalization + L1 + L2 regularization
+![](images/BN_wrong.png)
 
 #### Model 2: Group Normalization + L1 regularization
+![](images/GN_wrong.png)
 
 #### Model 3: Batch Normalization + L2 regularization
+![](images/LN_wrong.png)
