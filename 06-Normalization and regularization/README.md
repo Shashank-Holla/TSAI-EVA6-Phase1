@@ -41,6 +41,7 @@ The objective of this assignment is to design CNN model for image classification
 Normalization is a technique for training very deep neural networks that standardizes the inputs to a layer for each mini-batch. It has effect of stabilizing the learning process and dramatically reducing the number of training epochs required to train deep networks.
 
 ![](images/GN_BN_LN_IN.png)
+
 [Image Source](https://amaarora.github.io/2020/08/09/groupnorm.html)
 
 Shared above is a batch of input images of dimension NxCxHxW that needs to be normalized. Here, N is the batch size, C is the number of channels, H and W is the height and width of the feature maps.
@@ -68,6 +69,8 @@ L1 weight regularization is implemented in train function while L2 regularizatio
 ![](images/test_trend.JPG)
 
 ### Missclassified Images
+
+Below are the list of missclassifed images with their correct and predicted labels foe each of the run.
 
 #### Model 1: Batch Normalization + L1 + L2 regularization
 ![](images/BN_wrong.png)
