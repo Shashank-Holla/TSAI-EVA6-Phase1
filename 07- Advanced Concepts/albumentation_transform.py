@@ -6,12 +6,12 @@ def albumentation_transform(train, mean, stddev):
     # Scaling mean for 255 range 
     mean_255 = [255*i for i in mean]
     if train:
-        transform = A.Compose([  
+        transform = A.Compose([ 
+                           A.Normalize(mean=mean, std=stddev, max_pixel_value=255.0), 
                            A.HorizontalFlip(always_apply=False, p=0.5),
                            A.ShiftScaleRotate (shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5),
-                           A.CoarseDropout(max_holes=1, max_height=16, max_width=16, min_holes=1, fill_value=mean_255), 
-                           A.ToGray(),                                                    
-                           A.Normalize(mean=mean, std=stddev, max_pixel_value=255.0),
+                           A.CoarseDropout(max_holes=1, max_height=16, max_width=16, min_holes=1, fill_value=mean), 
+                           A.ToGray(),
                            ToTensorV2(),
                            ])
     else:
