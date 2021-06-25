@@ -17,6 +17,12 @@ Image transformations from Albumentation library is also used to provide means o
 * Batch Size: 128
 * Epochs: 75
 
+Scheduler - ReduceLROnPlateau
+
+* factor=0.1
+* patience=2
+* threshold=0.001
+
 ## Model Summary
 
 ```
