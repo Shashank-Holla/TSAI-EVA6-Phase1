@@ -104,5 +104,11 @@ Below are the list of missclassifed images with their correct and predicted labe
 
 Below is the class activation mapping for misclassified images. The activation generated is with respect to the class predicted by the model.
 
+#### Resnet-18 Layer 3
+
 ![](images/gradcam.png)
 
+
+#### Resnet-18 Layer 4
+
+![](images/gradcam4.png)
